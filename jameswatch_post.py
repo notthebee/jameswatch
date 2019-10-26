@@ -1,3 +1,4 @@
+#! /usr/bin/env python3
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
@@ -6,6 +7,17 @@ import tweepy
 import json
 from webpreview import web_preview
 from twitter_auth import *
+'''
+This is what your twitter_auth.py should look like:
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
+
+# OAuth process, using the keys and tokens
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+'''
 
 # BetaFace API for ethnicity and gender recognition
 def ethnicity_gender(imgurl):
