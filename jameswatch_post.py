@@ -54,6 +54,7 @@ existing = tweepy.Cursor(api.user_timeline, id="realJamesWatch").items()
 tweets = []
 for status in existing:
     tweets.append(status.text)
+tweets = '\t'.join(tweets)
 
 base_url = "https://news.google.com/"
 # Search for "james arrested" on Google news and scrape the result
